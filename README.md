@@ -2,7 +2,7 @@
 
 This project demonstrates zero-shot object detection using Google's OWL-ViT (Vision Transformer for Open-World Localization) model. It provides a simple web interface built with Gradio that allows you to detect arbitrary objects in both images and videos based on free-text prompts.
 
-![Gradio Interface Placeholder](images\placeholder.png)
+![Gradio Interface Placeholder](images/placeholder.png)
 
 ## Features
 
