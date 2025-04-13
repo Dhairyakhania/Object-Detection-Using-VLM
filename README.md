@@ -103,7 +103,7 @@ This project demonstrates zero-shot object detection using Google's OWL-ViT (Vis
 
 ## License
 
-This project is licensed under the MIT License - see the ![LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgements
 
