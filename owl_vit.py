@@ -13,7 +13,7 @@ import os
 processor = OwlViTProcessor.from_pretrained("google/owlvit-base-patch32")
 model = OwlViTForObjectDetection.from_pretrained("google/owlvit-base-patch32")
 
-# detect_image function
+# Function for image detection
 
 def detect_image(img, text_prompt):
     prompts = [p.strip() for p in text_prompt.split(",")]
@@ -148,7 +148,6 @@ image_tab = gr.Interface(
         gr.Textbox(lines=1, placeholder="e.g. a tiger, a monitor", label="Object Prompts (comma-separated)")
     ],
     outputs=gr.Image(type="pil", label="Detected Image"),
-    title="🖼️ OWL-ViT - Zero-Shot Image Detection"
 )
 
 video_tab = gr.Interface(
@@ -158,11 +157,10 @@ video_tab = gr.Interface(
         gr.Textbox(lines=1, placeholder="e.g. a tiger, a chair", label="Object Prompts (comma-separated)")
     ],
     outputs=gr.Video(label="Detected Video"), # Expects a file path
-    title="🎥 OWL-ViT - Zero-Shot Video Detection"
 )
 
 gr.TabbedInterface(
     interface_list=[image_tab, video_tab],
     tab_names=["Image Detection", "Video Detection"],
-    title="🧠 Zero-Shot Object Detection with OWL-ViT"
+    title="Zero-Shot Object Detection with OWL-ViT"
 ).launch(debug=True) 
